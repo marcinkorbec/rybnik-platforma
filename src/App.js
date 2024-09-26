@@ -1,16 +1,34 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import SalesInformation from './components/SalesInformation/SalesInformation.jsx';
-import SalesInfoHeader from './components/SalesInformation/SalesInfoHeader.jsx';
-import InvoiceTable from './components/SalesInformation/InvoiceTable.jsx';
-import Sidebar from './components/SalesInformation/Sidebar.jsx';
-import TopHeader from './components/SalesInformation/TopHeader.jsx';
-
+import Login from './components/LoginView/Login.jsx';
 import './App.css';
 
 function App() {
+  const isAuthenticated = () => {
+    // Tutaj dodaj logikę sprawdzania autentykacji
+    // Na razie zwracamy true, aby zawsze przekierowywać na SalesInformation
+    return true;
+  };
+
   return (
-    <div className="App">
-      <SalesInformation />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/"
+            element={
+              isAuthenticated() ? (
+                <SalesInformation />
+              ) : (
+                <Navigate to="/login" replace />
+              )
+            }
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

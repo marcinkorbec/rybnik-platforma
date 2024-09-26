@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Login.module.css';
 
 const Login = () => {
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleLoginChange = (e) => {
     setLogin(e.target.value);
@@ -15,9 +17,11 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Logika logowania
-    console.log('Login:', login);
-    console.log('Hasło:', password);
+    if (login === 'adm' && password === 'adm') {
+      navigate('/');
+    } else {
+      alert('Nieprawidłowy login lub hasło');
+    }
   };
 
   return (
