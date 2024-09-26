@@ -7,7 +7,7 @@ function TopHeader() {
     <header className={styles.topHeader}>
       <form className={styles.searchForm} role="search">
         <label htmlFor="searchInput" className={styles.visuallyHidden}>
-          Search
+          Wyszukaj
         </label>
         <div className={styles.searchWrapper}>
           <img
@@ -19,7 +19,7 @@ function TopHeader() {
             type="search"
             id="searchInput"
             className={styles.searchInput}
-            placeholder="Search"
+            placeholder="Wyszukaj"
             aria-label="Search"
           />
         </div>
@@ -27,7 +27,7 @@ function TopHeader() {
       <div className={styles.userActions}>
         <button
           className={styles.notificationButton}
-          aria-label="Notifications"
+          aria-label="Powiadomienia"
         >
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/955bc1a5ac8b5b34e62e55e5393830480944b9dad7edae89cc7378c578382ede?placeholderIfAbsent=true&apiKey=cabd41898d2b4f96868f37ab96d7062c"
@@ -35,7 +35,7 @@ function TopHeader() {
             className={styles.notificationIcon}
           />
         </button>
-        <button className={styles.userProfileButton} aria-label="User Profile">
+        <button className={styles.userProfileButton} aria-label="Profil Użytkownika">
           <img
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1a02742d5397f950c7057b677944345b4de579bfb64b114f242272b9b61fb0c3?placeholderIfAbsent=true&apiKey=cabd41898d2b4f96868f37ab96d7062c"
             alt=""
