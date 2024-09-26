@@ -1,0 +1,84 @@
+.topHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.searchForm {
+  flex: 1;
+  min-width: 240px;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  padding: 14px 20px;
+}
+
+.searchIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font: 400 16px Poppins, sans-serif;
+  color: #ada7a7;
+}
+
+.searchInput::placeholder {
+  color: #ada7a7;
+}
+
+.userActions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.notificationButton,
+.userProfileButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.notificationIcon,
+.userAvatar {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.userAvatar {
+  border-radius: 10px;
+}
+
+@media (max-width: 991px) {
+  .topHeader {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

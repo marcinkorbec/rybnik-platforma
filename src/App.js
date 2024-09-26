@@ -1,23 +1,15 @@
-import logo from './logo.svg';
+import SalesInformation from './components/SalesInformation/SalesInformation.jsx';
+import SalesInfoHeader from './components/SalesInformation/SalesInfoHeader.jsx';
+import InvoiceTable from './components/SalesInformation/InvoiceTable.jsx';
+import Sidebar from './components/SalesInformation/Sidebar.jsx';
+import TopHeader from './components/SalesInformation/TopHeader.jsx';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SalesInformation />
     </div>
   );
 }

@@ -1,0 +1,91 @@
+.tableWrapper {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 24px;
+  overflow-x: auto;
+}
+
+.invoiceTable {
+  width: 100%;
+  border-collapse: collapse;
+  font: 400 16px Poppins, sans-serif;
+}
+
+.invoiceTable th,
+.invoiceTable td {
+  padding: 15px 24px;
+  text-align: left;
+}
+
+.invoiceTable th {
+  font-weight: 600;
+  font-family: Lato, sans-serif;
+}
+
+.invoiceTable td {
+  border-top: 1px solid #e0e0e0;
+}
+
+.tableIcon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.invoiceId {
+  color: #0b63f8;
+}
+
+.tableContainer {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 24px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.invoiceTable {
+  width: 100%;
+  border-collapse: collapse;
+  font: 400 16px Poppins, sans-serif;
+}
+
+.invoiceTable th,
+.invoiceTable td {
+  padding: 15px 24px;
+  text-align: left;
+}
+
+.invoiceTable th {
+  font-weight: 600;
+  font-family: Lato, sans-serif;
+}
+
+.invoiceTable td {
+  border-top: 1px solid #e0e0e0;
+}
+
+.tableIcon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.invoiceId {
+  color: #0b63f8;
+}
+
+@media (max-width: 768px) {
+  .tableWrapper {
+    overflow-x: scroll;
+  }
+
+  .invoiceTable th,
+  .invoiceTable td {
+    padding: 10px 15px;
+  }
+}
