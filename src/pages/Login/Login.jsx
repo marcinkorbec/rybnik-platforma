@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './Login.module.css';
+import { toast } from 'react-toastify';
+import styles from '../../common/styles/Auth.module.css';
 
 const Login = () => {
   const [login, setLogin] = useState('');
@@ -18,15 +19,16 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (login === 'adm' && password === 'adm') {
+      toast.success('Logowanie zakończone sukcesem!');
       navigate('/');
     } else {
-      alert('Nieprawidłowy login lub hasło');
+      toast.error('Nieprawidłowy login lub hasło');
     }
   };
 
   return (
-    <div className={styles.loginContainer}>
-      <div className={styles.loginBox}>
+    <div className={styles.authContainer}>
+      <div className={styles.authBox}>
         <h1 className={styles.title}>Witaj</h1>
         <p className={styles.subtitle}>Zaloguj się wpisując swój login i hasło.</p>
         <form onSubmit={handleSubmit}>
@@ -56,7 +58,7 @@ const Login = () => {
             <input type="checkbox" id="remember" />
             <label htmlFor="remember">Zapamiętaj mnie</label>
           </div>
-          <button type="submit" className={styles.loginButton}>ZALOGUJ SIĘ</button>
+          <button type="submit" className={styles.authButton}>ZALOGUJ SIĘ</button>
         </form>
         <p className={styles.loginHelp}>Problemy z logowaniem?</p>
       </div>

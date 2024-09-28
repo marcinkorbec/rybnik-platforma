@@ -1,6 +1,6 @@
-import styles from "./SalesInfoHeader.module.css";
+import styles from "../styles/CouncillorsInfoHeader.module.css";
 
-function SalesInfoHeader() {
+function CouncillorsInfoHeader() {
   return (
     <section className={styles.salesInfoHeader}>
       <div className={styles.inputGroup}>
@@ -51,4 +51,4 @@ function SalesInfoHeader() {
   );
 }
 
-export default SalesInfoHeader;
+export default CouncillorsInfoHeader;

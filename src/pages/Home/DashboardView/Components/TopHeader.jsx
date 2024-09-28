@@ -1,12 +1,12 @@
 
 import React from "react";
-import styles from "./TopHeader.module.css";
+import styles from "../styles/TopHeader.module.css";
 
 function TopHeader() {
   return (
     <header className={styles.topHeader}>
       <form className={styles.searchForm} role="search">
-        <label htmlFor="searchInput" className={styles.visuallyHidden}>
+        {/* <label htmlFor="searchInput" className={styles.visuallyHidden}>
           Wyszukaj
         </label>
         <div className={styles.searchWrapper}>
@@ -20,9 +20,9 @@ function TopHeader() {
             id="searchInput"
             className={styles.searchInput}
             placeholder="Wyszukaj"
-            aria-label="Search"
+            aria-label="Wyszukaj"
           />
-        </div>
+        </div> */}
       </form>
       <div className={styles.userActions}>
         <button

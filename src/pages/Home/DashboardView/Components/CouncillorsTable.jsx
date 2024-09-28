@@ -1,4 +1,4 @@
-import styles from "./InvoiceTable.module.css";
+import styles from "../styles/CouncillorsTable.module.css";
 
 const councillorsData = [
   {
@@ -157,7 +157,7 @@ const councillorsData = [
 
 
 
-function InvoiceTable() {
+function CoucillorsTable() {
   return (
     <div className={styles.tableWrapper}>
       <table className={styles.invoiceTable}>
@@ -196,4 +196,4 @@ function InvoiceTable() {
   );
 }
 
-export default InvoiceTable;
+export default CoucillorsTable;
