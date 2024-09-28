@@ -59,7 +59,6 @@ const Login = () => {
           <button type="submit" className={styles.loginButton}>ZALOGUJ SIĘ</button>
         </form>
         <p className={styles.loginHelp}>Problemy z logowaniem?</p>
-        <button className={styles.govLoginButton}>Zaloguj się za pomocą <strong>Login.gov.pl</strong></button>
       </div>
     </div>
   );
