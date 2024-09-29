@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import sessionReducer from '../features/sessions/sessionSlice';
+import sidebarReducer from '../features/sidebarSlice';
 
 const store = configureStore({
     reducer: {
-        sessions: sessionReducer,
+        sidebar: sidebarReducer,
     },
 });
 
