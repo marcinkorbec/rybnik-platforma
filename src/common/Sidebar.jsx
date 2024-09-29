@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setActiveView } from "../features/sidebarSlice";
 import styles from "./styles/Sidebar.module.css";
 
 const menuItems = [
@@ -9,7 +11,7 @@ const menuItems = [
   },
   {
     icon: "/assets/sidebar_menu_icons/posiedzenie.svg",
-    label: "Posiedzenie",
+    label: "Lista Radnych",
   },
   {
     icon: "/assets/sidebar_menu_icons/kalendarz.svg",
@@ -46,14 +48,15 @@ const menuItems = [
 ];
 
 function Sidebar() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const activeView = useSelector((state) => state.sidebar.activeView);
 
   const handleMenuItemClick = (index, label) => {
     if (label === "Wyloguj") {
       navigate("/login");
     } else {
-      setActiveIndex(index);
+      dispatch(setActiveView(label));
     }
   };
 
@@ -68,7 +71,7 @@ function Sidebar() {
           {menuItems.map((item, index) => (
             <li
               key={index}
-              className={`${styles.menuItem} ${activeIndex === index ? styles.active : ""
+              className={`${styles.menuItem} ${activeView === item.label ? styles.active : ""
                 }`}
               onClick={() => handleMenuItemClick(index, item.label)}
             >
@@ -81,7 +84,7 @@ function Sidebar() {
       <div className={styles.helpSection}>
         <img
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ef8e7aad8c0d8605a8cc6dfa1933046444c5b5de431feb4f2421bf0693969c2?placeholderIfAbsent=true&apiKey=cabd41898d2b4f96868f37ab96d7062c"
-          alt=""
+          alt="Help Icon"
           className={styles.helpIcon}
         />
         <span>Help</span>
