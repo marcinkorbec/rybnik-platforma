@@ -1,7 +1,8 @@
 const routes = {
-    dashboard: '/',
-    login: '/login',
-    register: '/register'
+    dashboard: '/panel-radnego',
+    login: '/zaloguj',
+    register: '/zarejestruj',
+    guest: '/'
 };
 
 export default routes;

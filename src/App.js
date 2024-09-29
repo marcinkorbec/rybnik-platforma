@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import routes from './routes';
 import Dashboard from './pages/Home/DashboardView/Dashboard.jsx';
+import GuestPage from './pages/Guest/GuestPage.jsx';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
+          <Route path={routes.guest} element={<GuestPage />} />
           <Route path={routes.login} element={<Login />} />
           <Route path={routes.register} element={<Register />} />
           <Route
