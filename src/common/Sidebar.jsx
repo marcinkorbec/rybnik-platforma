@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setActiveView } from "../features/sidebarSlice";
 import styles from "./styles/Sidebar.module.css";
+import routes from "../routes";
 
 const menuItems = [
   {
@@ -54,7 +55,7 @@ function Sidebar() {
 
   const handleMenuItemClick = (index, label) => {
     if (label === "Wyloguj") {
-      navigate("/login");
+      navigate(routes.login);
     } else {
       dispatch(setActiveView(label));
     }

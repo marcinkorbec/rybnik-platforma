@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import styles from '../../common/styles/Auth.module.css';
+import routes from '../../routes';
 
 const Login = () => {
   const [login, setLogin] = useState('');
@@ -20,7 +21,7 @@ const Login = () => {
     e.preventDefault();
     if (login === 'adm' && password === 'adm') {
       toast.success('Logowanie zakończone sukcesem!');
-      navigate('/');
+      navigate(routes.dashboard);
     } else {
       toast.error('Nieprawidłowy login lub hasło');
     }
