@@ -12,7 +12,7 @@ import Dashboard from './pages/Home/DashboardView/Dashboard.jsx';
 function App() {
   const isAuthenticated = () => {
     // Tutaj dodać potem logikę sprawdzania autentykacji
-    // Na razie zwracamy true, aby zawsze przekierowywać na SalesInformation
+    // Na razie zwracamy true, aby zawsze przekierowywać na Dashboard
     return true;
   };
 
